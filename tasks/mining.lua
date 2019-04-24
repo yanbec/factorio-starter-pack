@@ -1,0 +1,3 @@
+local Mining = {};
+
+return Mining;
