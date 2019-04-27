@@ -43,3 +43,15 @@ script.on_event(defines.events.on_player_created, function(event)
 	Car.set_car_items(player);
 
 end)
+
+script.on_event(defines.events.on_entity_died, function(event)
+	local entity = event.entity;
+ 	if entity.type ~= "player" then return end;
+
+	local pos = entity.surface.find_non_colliding_position(
+		"steel-chest", entity.position, 8, 1);
+	if not pos then return end;
+
+	entity.surface.create_entity{name = "steel-chest", position = pos, force="neutral"};
+end)
+
