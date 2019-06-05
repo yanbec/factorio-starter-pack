@@ -1,11 +1,15 @@
 SmallKit = {};
 
-function SmallKit.define_quickbar() {
-    
-}
+function SmallKit.define_quickbar()
+    quickbarItems = {};
 
-function SmallKit.define_items() {
+    return quickbarItems;
+end
 
-}
+function SmallKit.define_items()
+    items = {};
+
+    return items;
+end
 
 return SmallKit;

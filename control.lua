@@ -1,6 +1,8 @@
 local QuickbarUtils = require("utils/quickbar");
 local InventoryUtils = require("utils/inventory");
 local SmallKit = require("kits/small_kit");
+local MediumKit = require("kits/medium_kit");
+local Globals = require("globals");
 
 script.on_event(defines.events.on_player_created, function(event)
 	local player = game.players[event.player_index];
@@ -10,15 +12,15 @@ script.on_event(defines.events.on_player_created, function(event)
 	-- Define kits
 	local kits = {};
 
-	kits["small"] = {
-		"quickbar": SmallKit.define_quickbar(),
-		"items": SmallKit.define_items()
-	};
-	kits["medium"] = {};
-	kits["large"] = {};
-	kits["default"] = {};
+	kits["small"] = {};
+	kits["small"]["quickbar"] = SmallKit.define_quickbar();
+	kits["small"]["items"] = SmallKit.define_items();
 
-	local selectedkit = settings.startup["starter-pack"].value;
+	kits["medium"] = {};
+	kits["medium"]["quickbar"] = MediumKit.define_quickbar();
+	kits["medium"]["items"] = MediumKit.define_items();
+
+	--selectedkit sale del boton selecionado en la gui.
 	local kit = kits[selectedKit];
 	player.print(kit)
 	if kit == nil then
@@ -33,10 +35,10 @@ script.on_event(defines.events.on_player_created, function(event)
 	player.print("Initial items removed.");
 
 	-- Setup quickbar
-	QuickbarUtils.set_quickbar_filters(player, kit["quickbar"]);
+	-- QuickbarUtils.set_quickbar_filters(player, kit["quickbar"]);
 	
 	-- Setup items
-	InventoryUtils.set_inventory(player, kit["items"]);
+	-- InventoryUtils.set_inventory(player, kit["items"]);
 
 end)
 
