@@ -1,5 +1,6 @@
 local QuickbarUtils = require("utils/quickbar");
 local InventoryUtils = require("utils/inventory");
+local Gui = require("utils/gui");
 local SmallKit = require("kits/small_kit");
 local MediumKit = require("kits/medium_kit");
 local Globals = require("globals");
@@ -8,7 +9,9 @@ script.on_event(defines.events.on_player_created, function(event)
 	local player = game.players[event.player_index];
 	game.speed = Globals.GAME_SPEED; -- 3
 	player.color = Globals.PLAYER_COLOR;
-	  
+
+	Gui.create_kit_selector(player)
+	
 	-- Define kits
 	local kits = {};
 
@@ -42,3 +45,6 @@ script.on_event(defines.events.on_player_created, function(event)
 
 end)
 
+script.on_event(defines.events.on_gui_click, function(event)
+
+end) 
