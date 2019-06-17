@@ -1,13 +1,53 @@
 LargeKit = {};
 
 function LargeKit.define_quickbar()
-    quickbarItems = {};
+    quickbarItems = {
+        {1, "transport-belt"},
+		{2, "underground-belt"},
+		{3, "splitter"},
+		{4, "inserter"},
+		{5, "medium-electric-pole"},
+		{10, "car"}
+    };
 
     return quickbarItems;
 end
 
 function LargeKit.define_items()
-    items = {};
+    items = {
+        {"power-armor", 1},
+		{"iron-plate", 600},
+		{"copper-plate", 400},
+		{"iron-gear-wheel", 200},
+		{"electronic-circuit", 200},
+		{"advanced-circuit", 200},
+		{"transport-belt", 1500},
+		{"underground-belt", 50},
+		{"splitter", 50},
+		{"steel-furnace", 100},
+		{"assembling-machine-2", 100},
+		{"inserter", 300},
+		{"long-handed-inserter", 50},
+		{"steel-chest", 50},
+		{"electric-mining-drill", 50},
+		{"medium-electric-pole", 400},
+		{"big-electric-pole", 100},
+		{"logistic-chest-requester", 100},
+		{"logistic-chest-passive-provider", 100},
+		{"boiler", 20},
+		{"steam-engine", 40},
+		{"offshore-pump", 10},
+		{"pipe-to-ground", 100},
+		{"pipe", 100},
+		{"chemical-plant", 20},
+		{"oil-refinery", 10}, 
+		{"car", 1},
+		{"coal", 50},
+		{"roboport", 20},
+		{"construction-robot", 50},
+		{"logistic-robot", 300},
+		{"lab", 10}
+    };
 
     return items;
 end

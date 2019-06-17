@@ -19,7 +19,6 @@ script.on_event(defines.events.on_player_created, function(event)
 	for i, v in pairs(Globals.INITIAL_ITEMS) do
 		playerInventory.remove({name=v.name, count=v.count});
 	end
-	player.print("Initial items removed.");
 
 end)
 
