@@ -21,8 +21,6 @@ script.on_event(defines.events.on_player_created, function(event)
 	end
 	player.print("Initial items removed.");
 
-	
-
 end)
 
 script.on_event(defines.events.on_gui_click, function(event)
@@ -50,13 +48,13 @@ script.on_event(defines.events.on_gui_click, function(event)
 	kits["Default Kit"]["items"] = DefaultKit.define_items();
 
 	if selectedButton.name == "small-kit" then
-		Gui.update_kit(Globals.KITS.SMALL_KIT.TITLE, Globals.KITS.SMALL_KIT.DESCRIPTION, kit_gui)
+		Gui.update_kit(Globals.KITS.SMALL_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "medium-kit" then
-		Gui.update_kit(Globals.KITS.MEDIUM_KIT.TITLE, Globals.KITS.MEDIUM_KIT.DESCRIPTION, kit_gui)
+		Gui.update_kit(Globals.KITS.MEDIUM_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "large-kit" then
-		Gui.update_kit(Globals.KITS.LARGE_KIT.TITLE, Globals.KITS.LARGE_KIT.DESCRIPTION, kit_gui)
+		Gui.update_kit(Globals.KITS.LARGE_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "default-kit" then
-		Gui.update_kit(Globals.KITS.DEFAULT_KIT.TITLE, Globals.KITS.DEFAULT_KIT.DESCRIPTION, kit_gui)
+		Gui.update_kit(Globals.KITS.DEFAULT_KIT.TITLE, kit_gui)
 	end
 	
 	if selectedButton.name == "select-kit" then

@@ -3,8 +3,7 @@ local Globals = {
     INITIAL_ITEMS = {
         {name = "iron-plate", count = 8},
         {name = "burner-mining-drill", count = 1},
-        {name = "stone-furnace", count = 1},
-        {name = "wood", count = 1}
+        {name = "stone-furnace", count = 1}
     },
     PLAYER_COLOR = {
         r = 252,
@@ -14,7 +13,10 @@ local Globals = {
     KITS = {
         SMALL_KIT = {
             TITLE = "Small Kit",
-            DESCRIPTION = "Small Kit includes:"
+            DESCRIPTION = "Small Kit includes:",
+            ITEMS = {
+
+            }
         },
         MEDIUM_KIT = {
             TITLE = "Medium Kit",
@@ -26,7 +28,13 @@ local Globals = {
         },
         DEFAULT_KIT = {
             TITLE = "Default Kit",
-            DESCRIPTION = "Default Kit includes:"
+            DESCRIPTION = "Default Kit includes:",
+            ITEMS = {
+                {name = "iron-plate", count = 8},
+                {name = "burner-mining-drill", count = 1},
+                {name = "stone-furnace", count = 1},
+                {name = "wood", count = 1}
+            }
         }
     }
 }
