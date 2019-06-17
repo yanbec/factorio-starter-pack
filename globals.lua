@@ -10,6 +10,24 @@ local Globals = {
         r = 252,
         g = 227,
         b = 0
+    },
+    KITS = {
+        SMALL_KIT = {
+            TITLE = "Small Kit",
+            DESCRIPTION = "Small Kit includes:"
+        },
+        MEDIUM_KIT = {
+            TITLE = "Medium Kit",
+            DESCRIPTION = "Medium Kit includes"
+        },
+        LARGE_KIT = {
+            TITLE = "Large Kit",
+            DESCRIPTION = "Large kit includes:"
+        },
+        DEFAULT_KIT = {
+            TITLE = "Default Kit",
+            DESCRIPTION = "Default Kit includes:"
+        }
     }
 }
 
