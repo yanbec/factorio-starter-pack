@@ -1,10 +1,7 @@
 local QuickbarUtils = require("utils/quickbar");
 local InventoryUtils = require("utils/inventory");
+local ArmorUtils = require("utils/armor");
 local Gui = require("utils/gui");
-local SmallKit = require("kits/small_kit");
-local MediumKit = require("kits/medium_kit");
-local LargeKit = require("kits/large_kit");
-local DefaultKit = require("kits/default_kit");
 local Globals = require("globals");
 
 script.on_event(defines.events.on_player_created, function(event)
@@ -31,21 +28,24 @@ script.on_event(defines.events.on_gui_click, function(event)
 	local kits = {};
 
 	kits["Small Kit"] = {};
-	kits["Small Kit"]["quickbar"] = SmallKit.define_quickbar();
-	kits["Small Kit"]["items"] = SmallKit.define_items();
+	kits["Small Kit"]["quickbar"] = Globals.KITS.SMALL_KIT.QUICKBAR;
+	kits["Small Kit"]["items"] = Globals.KITS.SMALL_KIT.ITEMS;
 
 	kits["Medium Kit"] = {};
-	kits["Medium Kit"]["quickbar"] = MediumKit.define_quickbar();
-	kits["Medium Kit"]["items"] = MediumKit.define_items();
+	kits["Medium Kit"]["quickbar"] = Globals.KITS.MEDIUM_KIT.QUICKBAR;
+	kits["Medium Kit"]["items"] = Globals.KITS.MEDIUM_KIT.ITEMS;
+	kits["Medium Kit"]["armor-items"] = Globals.KITS.LARGE_KIT.ARMOR;
 
 	kits["Large Kit"] = {};
-	kits["Large Kit"]["quickbar"] = LargeKit.define_quickbar();
-	kits["Large Kit"]["items"] = LargeKit.define_items();
+	kits["Large Kit"]["quickbar"] = Globals.KITS.LARGE_KIT.QUICKBAR;
+	kits["Large Kit"]["items"] = Globals.KITS.LARGE_KIT.ITEMS;
+	kits["Large Kit"]["armor-items"] = Globals.KITS.LARGE_KIT.ARMOR;
 
 	kits["Default Kit"] = {};
-	kits["Default Kit"]["quickbar"] = DefaultKit.define_quickbar();
-	kits["Default Kit"]["items"] = DefaultKit.define_items();
+	kits["Default Kit"]["quickbar"] = Globals.KITS.DEFAULT_KIT.QUICKBAR;
+	kits["Default Kit"]["items"] = Globals.KITS.DEFAULT_KIT.ITEMS;
 
+	-- HANDLE GUI INFO
 	if selectedButton.name == "small-kit" then
 		Gui.update_kit(Globals.KITS.SMALL_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "medium-kit" then
@@ -69,6 +69,9 @@ script.on_event(defines.events.on_gui_click, function(event)
 	
 		-- Setup items
 		InventoryUtils.set_inventory(player, kit["items"]);
+
+		-- Setup armor items
+		ArmorUtils.set_armor_items(player, kit["armor-items"]);
 
 		kit_gui.destroy();	
 	end

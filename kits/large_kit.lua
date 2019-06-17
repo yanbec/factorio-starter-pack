@@ -52,4 +52,20 @@ function LargeKit.define_items()
     return items;
 end
 
+function LargeKit.define_armor_items()
+    armor_items = {
+        {"fusion-reactor-equipment"},
+		{"personal-roboport-equipment"},
+		{"personal-roboport-equipment"},
+		{"personal-roboport-equipment"},
+		{"personal-roboport-equipment"},
+		{"personal-roboport-equipment"},
+		{"battery-equipment"},
+		{"battery-equipment"},
+		{"battery-equipment"}
+    }
+
+    return armor_items;
+end
+
 return LargeKit;
