@@ -46,18 +46,18 @@ script.on_event(defines.events.on_gui_click, function(event)
 	kits["Default Kit"]["items"] = Globals.KITS.DEFAULT_KIT.ITEMS;
 
 	-- HANDLE GUI INFO
-	if selectedButton.name == "small-kit" then
-		Gui.update_kit(Globals.KITS.SMALL_KIT.TITLE, kit_gui)
+	if selectedButton.name == "small-kit" then	
+		Gui.update_kit(player, Globals.KITS.SMALL_KIT.GUI_TITLE, Globals.KITS.SMALL_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "medium-kit" then
-		Gui.update_kit(Globals.KITS.MEDIUM_KIT.TITLE, kit_gui)
+		Gui.update_kit(player, Globals.KITS.MEDIUM_KIT.GUI_TITLE, Globals.KITS.MEDIUM_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "large-kit" then
-		Gui.update_kit(Globals.KITS.LARGE_KIT.TITLE, kit_gui)
+		Gui.update_kit(player, Globals.KITS.LARGE_KIT.GUI_TITLE, Globals.KITS.LARGE_KIT.TITLE, kit_gui)
 	elseif selectedButton.name == "default-kit" then
-		Gui.update_kit(Globals.KITS.DEFAULT_KIT.TITLE, kit_gui)
+		Gui.update_kit(player, Globals.KITS.DEFAULT_KIT.GUI_TITLE, Globals.KITS.DEFAULT_KIT.TITLE, kit_gui)
 	end
 	
 	if selectedButton.name == "select-kit" then
-		local kit_title = selectedButton.parent.children[1].caption
+		local kit_title = kit_gui.children[1].children[2].children[1].caption;
 		player.print(kit_title .. " Selected!");
 		local kit = kits[kit_title];
 

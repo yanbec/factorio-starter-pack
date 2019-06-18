@@ -17,28 +17,28 @@ local Globals = {
     },
     KITS = {
         SMALL_KIT = {
-            TITLE = "Small Kit",
-            DESCRIPTION = "Small Kit includes:",
+            GUI_TITLE = "Small Kit",
+            TITLE = "SMALL_KIT",
             QUICKBAR = SmallKit.define_quickbar(),
             ITEMS = SmallKit.define_items()
         },
         MEDIUM_KIT = {
-            TITLE = "Medium Kit",
-            DESCRIPTION = "Medium Kit includes",
+            GUI_TITLE = "Medium Kit",
+            TITLE = "MEDIUM_KIT",
             QUICKBAR = MediumKit.define_quickbar(),
             ITEMS = MediumKit.define_items(),
             ARMOR = MediumKit.define_armor_items()
         },
         LARGE_KIT = {
-            TITLE = "Large Kit",
-            DESCRIPTION = "Large kit includes:",
+            GUI_TITLE = "Large Kit",
+            TITLE = "LARGE_KIT",
             QUICKBAR = LargeKit.define_quickbar(),
             ITEMS = LargeKit.define_items(),
             ARMOR = LargeKit.define_armor_items()
         },
         DEFAULT_KIT = {
-            TITLE = "Default Kit",
-            DESCRIPTION = "Default Kit includes:",
+            GUI_TITLE = "Default Kit",
+            TITLE = "DEFAULT_KIT",
             QUICKBAR = DefaultKit.define_quickbar(),
             ITEMS = DefaultKit.define_items()
         }
