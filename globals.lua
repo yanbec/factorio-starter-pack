@@ -34,7 +34,8 @@ local Globals = {
             TITLE = "LARGE_KIT",
             QUICKBAR = LargeKit.define_quickbar(),
             ITEMS = LargeKit.define_items(),
-            ARMOR = LargeKit.define_armor_items()
+            ARMOR = LargeKit.define_armor_items(),
+            TECHNOLOGIES = LargeKit.define_technology_list()
         },
         DEFAULT_KIT = {
             GUI_TITLE = "Default Kit",

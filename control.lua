@@ -1,6 +1,7 @@
 local QuickbarUtils = require("utils/quickbar");
 local InventoryUtils = require("utils/inventory");
 local ArmorUtils = require("utils/armor");
+local TechnologiesUtils = require("utils/technologies");
 local Gui = require("utils/gui");
 local Globals = require("globals");
 
@@ -40,6 +41,7 @@ script.on_event(defines.events.on_gui_click, function(event)
 	kits["Large Kit"]["quickbar"] = Globals.KITS.LARGE_KIT.QUICKBAR;
 	kits["Large Kit"]["items"] = Globals.KITS.LARGE_KIT.ITEMS;
 	kits["Large Kit"]["armor-items"] = Globals.KITS.LARGE_KIT.ARMOR;
+	kits["Large Kit"]["technologies"] = Globals.KITS.LARGE_KIT.TECHNOLOGIES;
 
 	kits["Default Kit"] = {};
 	kits["Default Kit"]["quickbar"] = Globals.KITS.DEFAULT_KIT.QUICKBAR;
@@ -71,7 +73,14 @@ script.on_event(defines.events.on_gui_click, function(event)
 		InventoryUtils.set_inventory(player, kit["items"]);
 
 		-- Setup armor items
-		ArmorUtils.set_armor_items(player, kit["armor-items"]);
+		if kit["armor-items"] ~= nil then
+			ArmorUtils.set_armor_items(player, kit["armor-items"]);
+		end
+
+		-- Setup technologies
+		if kit["technologies"] ~= nil then
+			TechnologiesUtils.unlock_technologies(player, kit["technologies"]);			
+		end
 
 		kit_gui.destroy();	
 	end

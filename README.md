@@ -10,24 +10,26 @@ Download: https://mods.factorio.com/mod/Starter_Pack
 
 ## Game Speed
 
-To change te game speed, modify **line 2 of globals.lua**. (Default: 3)
+To change te game speed, modify **line 7 of globals.lua**. (Default: 3)
 
-## Resources
-![alt text](images/starter-pack-inventory.PNG "Resources")<br>
-By having the mod active, the resources that come at the beginning are deleted and those of the image above are included.
+## Kits
+When the game starts, the player can choose wich type of starter pack he prefers.
 
-## Quickbar
-![alt text](images/starter-pack-quickbar.PNG "Quickbar")
+> Small Kit
+![alt text](images/small-kit.png "Small Kit")
 
-This is the quick bar by default, if you want to change the shortcut items you have to modify **filters.lua file**. Use the function set_filter to change the position and the resource that you want to define in the quickbar.
+> Medium Kit
+![alt text](images/medium-kit.png "Medium Kit")
 
-# What's next?
+> Large Kit
+![alt text](images/large-kit.png "Large Kit")
+
+> Default Kit
+![alt text](images/default-kit.png "Default Kit")
+
+## What's next?
 In the next version the following improvements will be included:
 
- > Kits (small - medium - large)
-
- When the game starts, the player can choose which type of starter pack he prefers.
-
- > Death Chest
+> Death Chest
 
 When the player dies, he leaves in that location a chest with all the resources he had in his inventory.

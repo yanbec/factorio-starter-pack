@@ -68,4 +68,27 @@ function LargeKit.define_armor_items()
     return armor_items;
 end
 
+function LargeKit.define_technology_list()
+	technology_list = {
+		{"automation"},
+		{"steel-processing"},
+		{"automation-2"},
+		{"oil-processing"},
+		{"plastics"},
+		{"advanced-electronics"},
+		{"sulfur-processing"},
+		{"battery"},
+		{"electronics"},
+		{"engine"},
+		{"electric-engine"},
+		{"flying"},
+		{"robotics"},
+		{"logistic-robotics"},
+		{"construction-robotics"},
+		{"logistic-system"}
+	}
+
+	return technology_list;
+end
+
 return LargeKit;
