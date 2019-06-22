@@ -1,4 +1,4 @@
-# Starter-Pack
+# Starter-Pack (v1.0.0)
 
 A Factorio mod that makes you start with more items to accelerate the beginning of the game. Goal is to skip past burner miners and jump straight into laying out a main bus.
 
@@ -16,15 +16,19 @@ To change te game speed, modify **line 7 of globals.lua**. (Default: 3)
 When the game starts, the player can choose wich type of starter pack he prefers.
 
 > Small Kit
+
 ![alt text](images/small-kit.png "Small Kit")
 
 > Medium Kit
+
 ![alt text](images/medium-kit.png "Medium Kit")
 
 > Large Kit
+
 ![alt text](images/large-kit.png "Large Kit")
 
 > Default Kit
+
 ![alt text](images/default-kit.png "Default Kit")
 
 ## What's next?
