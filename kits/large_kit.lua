@@ -81,7 +81,6 @@ function LargeKit.define_technology_list()
 		{"electronics"},
 		{"engine"},
 		{"electric-engine"},
-		{"flying"},
 		{"robotics"},
 		{"logistic-robotics"},
 		{"construction-robotics"},

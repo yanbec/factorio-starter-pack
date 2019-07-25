@@ -1,4 +1,4 @@
-# Starter-Pack (v1.0.0)
+# Starter-Pack (v1.1.0)
 
 A Factorio mod that makes you start with more items to accelerate the beginning of the game. Goal is to skip past burner miners and jump straight into laying out a main bus.
 
@@ -30,10 +30,3 @@ When the game starts, the player can choose wich type of starter pack he prefers
 > Default Kit
 
 ![alt text](images/default-kit.png "Default Kit")
-
-## What's next?
-In the next version the following improvements will be included:
-
-> Death Chest
-
-When the player dies, he leaves in that location a chest with all the resources he had in his inventory.

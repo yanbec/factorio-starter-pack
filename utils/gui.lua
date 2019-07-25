@@ -1,4 +1,4 @@
-local Globals = require("../globals");
+local Globals = require("globals");
 
 Gui = {}
 
