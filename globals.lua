@@ -4,7 +4,6 @@ local LargeKit = require("kits/large_kit");
 local DefaultKit = require("kits/default_kit");
 
 local Globals = {
-    GAME_SPEED = 3,
     INITIAL_ITEMS = {
         {name = "iron-plate", count = 8},
         {name = "burner-mining-drill", count = 1},

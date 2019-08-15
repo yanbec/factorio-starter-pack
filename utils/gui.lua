@@ -28,6 +28,11 @@ function Gui.create_kit_selector(player)
     -- SELECT BUTTON
     center_frame["frame_info"]["kit_info_flow"].add{type="flow", name="kit-select-flow", directon="vertical"}
     center_frame["frame_info"]["kit_info_flow"]["kit-select-flow"].add{type="button", name="select-kit", caption="Select Kit", style = "Kit_Button_Flow_Style"}
+
+    -- GAME SPEED
+    center_frame.add{type="frame", caption="Game Speed: 1", name="game_speed_frame"}
+    center_frame["game_speed_frame"].add{type="flow", name="game_speed_flow", direction="horizontal"}
+    center_frame["game_speed_frame"]["game_speed_flow"].add{type="slider", minimum_value=1, maximum_value=10, value=1, value_step=1, name="game_speed_slider"}
 end 
 
 function Gui.update_kit(player, gui_title, kit_title, kit_gui)
@@ -44,6 +49,10 @@ function Gui.update_kit(player, gui_title, kit_title, kit_gui)
         kit_items_list.add{type="label", name="kit-item " .. i}
         kit_items_list["kit-item " .. i].caption = define_item_caption(item)
     end
+end
+
+function Gui.update_game_speed_information(game_speed_value, kit_gui)
+    kit_gui.children[2].caption = "Game Speed: " .. game_speed_value;
 end
 
 function define_item_caption(item)

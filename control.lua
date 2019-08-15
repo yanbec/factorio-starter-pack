@@ -7,7 +7,6 @@ local Globals = require("globals");
 
 script.on_event(defines.events.on_player_created, function(event)
 	local player = game.players[event.player_index];
-	game.speed = Globals.GAME_SPEED; -- 3
 	player.color = Globals.PLAYER_COLOR;
 
 	Gui.create_kit_selector(player)
@@ -60,7 +59,9 @@ script.on_event(defines.events.on_gui_click, function(event)
 	
 	if selectedButton.name == "select-kit" then
 		local kit_title = kit_gui.children[1].children[2].children[1].caption;
+		local game_speed_title = kit_gui.children[2].caption;
 		player.print(kit_title .. " Selected!");
+		player.print(game_speed_title);
 		local kit = kits[kit_title];
 
 		if kit == nil then
@@ -86,3 +87,14 @@ script.on_event(defines.events.on_gui_click, function(event)
 	end
 	
 end) 
+
+script.on_event(defines.events.on_gui_value_changed, function(event)
+	local player = game.players[event.player_index];
+	local slider = event.element;
+	local kit_gui = slider.gui.center["frame"];
+	local game_speed = event.element.slider_value;
+
+	game.speed = game_speed;
+	Gui.update_game_speed_information(game_speed, kit_gui);
+	
+end)
